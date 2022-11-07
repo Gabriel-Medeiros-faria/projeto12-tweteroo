@@ -31,7 +31,7 @@ const img = arrUser.find((obj)=>obj.username === req.body.username)
 })
 
 app.get("/tweets", (req,res)=>{
-        res.send(arrTweets)
+    res.send(arrTweets.slice(0,10))
     
 })
 app.listen(5000, ()=> console.log("App running in port: 5000"))
